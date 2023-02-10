@@ -1,3 +1,4 @@
+const readInvoices = require('./readInvoice');
 const readOrders = require('./readOrder');
 
-module.exports = { readOrders };
+module.exports = { readInvoices, readOrders };
