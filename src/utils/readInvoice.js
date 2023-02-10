@@ -1,6 +1,7 @@
 /* eslint-disable camelcase */
 const fs = require('fs/promises');
 const path = require('path');
+const formatter = require('./formatter');
 
 const readInvoice = async (filePath) => {
   try {
@@ -8,7 +9,9 @@ const readInvoice = async (filePath) => {
 
     const parsedContent = fileContent.split('\n').map((line) => JSON.parse(line.trim()));
 
-    return parsedContent;
+    const formattedContent = await formatter(parsedContent);
+
+    return formattedContent;
   } catch (error) {
     console.error(`Error reading file at ${filePath}:`, error.message);
 
