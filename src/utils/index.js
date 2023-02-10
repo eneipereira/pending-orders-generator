@@ -1,4 +1,5 @@
+const formatter = require('./formatter');
 const readInvoices = require('./readInvoice');
 const readOrders = require('./readOrder');
 
-module.exports = { readInvoices, readOrders };
+module.exports = { formatter, readInvoices, readOrders };

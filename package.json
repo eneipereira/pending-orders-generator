@@ -17,6 +17,7 @@
     "eslint-plugin-import": "^2.27.5"
   },
   "dependencies": {
-    "joi": "^17.7.0"
+    "joi": "^17.7.0",
+    "lodash": "^4.17.21"
   }
 }
