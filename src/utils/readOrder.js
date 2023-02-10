@@ -2,8 +2,11 @@
 const fs = require('fs/promises');
 const path = require('path');
 const formatter = require('./formatter');
+const verifyOrder = require('./verifyOrder');
 
 const readOrder = async (filePath) => {
+  const fileName = filePath.split('/').at(-1);
+
   try {
     const fileContent = await fs.readFile(filePath, 'utf8');
 
@@ -11,7 +14,9 @@ const readOrder = async (filePath) => {
 
     const formattedContent = await formatter(parsedContent);
 
-    return formattedContent;
+    const result = await verifyOrder(formattedContent, fileName);
+
+    return result;
   } catch (error) {
     console.error(`Error reading file at ${filePath}:`, error.message);
 
