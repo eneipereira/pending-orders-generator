@@ -3,8 +3,8 @@ const getPendingOrders = require('./getPendingOrders');
 const readInvoices = require('./readInvoice');
 const readOrders = require('./readOrder');
 const txtWriter = require('./txtWriter');
-const verifyOrder = require('./verifyOrder');
 const verifyInvoice = require('./verifyInvoice');
+const verifyOrder = require('./verifyOrder');
 
 module.exports = {
   formatter,
