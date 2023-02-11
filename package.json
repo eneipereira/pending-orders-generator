@@ -4,7 +4,7 @@
   "description": "Este projeto é um teste técnico do processo seletivo para a vaga de desenvolvedor backend jr da empresa Port Louis",
   "main": "src/index.js",
   "scripts": {
-    "start": "node index.js",
+    "start": "node src/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
