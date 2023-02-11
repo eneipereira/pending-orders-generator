@@ -12,8 +12,9 @@ const verifyOrder = async (order, file) => {
   ]);
 
   return itemResults.map((item) => ({
-      id_pedido: file.split('.')[0],
       ...item,
+      id_pedido: file.split('.')[0],
+      valor_unitario_produto: parseFloat(item.valor_unitario_produto.replace(',', '.')).toFixed(2),
     }));
 };
 
